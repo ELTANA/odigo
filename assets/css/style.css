@@ -406,6 +406,13 @@ main {
     padding-block: 2%;
     padding-inline: 5%;
 }
+
+.detail--card_link,
+.places--link {
+    color: var(--blue);
+    font-size: 16px;
+    line-height: 24px;
+}
 /* END OF PHOTO GRID SECTION */
 
 /* BEGINING OF PLACES CARD SECTION */
@@ -483,6 +490,7 @@ main {
 .card_overlay {
     height: 15%;
 }
+
 .card_overlay,
 .image_grid_overlay {
     background-color: rgba(0, 0, 0, 0.2);
@@ -536,6 +544,15 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.play,
+.pause {
+    width: 100px;
+    height: 100px;
+    padding: 16px;
+    z-index: 2;
+    transition: all 700ms ease-in-out;
 }
 /* END OF SHOWCASE SECTION */
 
