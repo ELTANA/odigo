@@ -36,14 +36,14 @@ hamburger.addEventListener("click", () => {
     html.classList.toggle("overflow-hidden");
 });
 
-// HERO SEARCH BOX
+// HERO SEARCH BOX ELEMENT CREATION
 searchBox = document.createElement("input");
 searchBox.setAttribute("type", "text");
 searchBox.setAttribute("placeholder", "What would you like to do?");
 searchBox.classList.add("searchBox", "no-border", "display-block");
 console.log(searchBox);
 
-// SEARCH BOX ONE
+// Display Search Box One on Mouse ENter
 searchWhat.addEventListener("mouseenter", () => {
     ovalImg_one.classList.add("display-none");
     customLabel_one.classList.add("display-none");
@@ -58,7 +58,7 @@ searchWhat.addEventListener("mouseleave", () => {
     searchWhat.removeChild(searchBox);
 });
 
-// SEARCH BOX TWO
+// Display Search Box Two on Mouse ENter
 searchWhere.addEventListener("mouseenter", () => {
     ovalImg_two.classList.add("display-none");
     customLabel_two.classList.add("display-none");
@@ -81,15 +81,15 @@ btnOverlay.addEventListener("click", () => {
     showcase_video.play();
 });
 
+// Pause Video
 showcase_video.addEventListener("pause", () => {
-    // showcase_video.classList.add("display-none");
-    // video_placeholder_img.classList.remove("display-none");
     btnOverlay.classList.remove("display-none");
     play.classList.add("display-none");
     pause.classList.remove("display-none");
     showcase_video.toggleAttribute("pause", "play");
 });
 
+// Pause and Resume Video
 pause.addEventListener("click", () => {
     showcase_video.play();
     btnOverlay.classList.add("display-none");
@@ -97,6 +97,7 @@ pause.addEventListener("click", () => {
     pause.classList.add("display-none");
 });
 
+// Display Image Background on Video end
 showcase_video.addEventListener("ended", () => {
     showcase_video.classList.add("display-none");
     video_placeholder_img.classList.remove("display-none");
