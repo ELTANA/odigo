@@ -584,6 +584,29 @@ main {
 }
 /* END OF FOOTER SECTION */
 
+/* MEDIA QUERIES 1441px SCREEMS & BIGGER */
+@media only screen and (min-width: 1440px) {
+    #hero {
+        padding-inline: 10%;
+    }
+}
+
+/* MEDIA QUERIES 1441px SCREEMS & BIGGER */
+@media only screen and (min-width: 1440px) {
+    section:not(#hero):not(#showcase) {
+        padding-block-start: 10%;
+        padding-inline: 10%;
+    }
+
+    #navbar {
+        padding-inline: 15%;
+    }
+
+    #benefits {
+        width: 80%;
+    }
+}
+
 /* MEDIA QUERIES 1366px SCREEMS & SMALLER */
 @media only screen and (max-width: 1366px) {
     section:not(#hero):not(#showcase) {
@@ -787,6 +810,15 @@ main {
     .video_placeholder_img {
         width: 100%;
         height: 100%;
+    }
+
+    /* #showcase img { */
+    #showcase img,
+    #showcase video {
+        width: 100%;
+        height: 100vh;
+        /* background: url("../images/video_img.png") no-repeat center;
+        background-size: cover; */
     }
 
     .play,
