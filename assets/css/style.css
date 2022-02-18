@@ -587,7 +587,7 @@ main {
 /* MEDIA QUERIES 1441px SCREEMS & BIGGER */
 @media only screen and (min-width: 1440px) {
     #hero {
-        padding-inline: 10%;
+        padding-inline: 15%;
     }
 }
 
