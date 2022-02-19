@@ -39,9 +39,14 @@ section:not(#hero):not(#showcase) {
 }
 
 .btn:hover {
-    cursor: pointer;
     background-color: var(--blue-hover);
     /* border: 1px solid var(--blue); */
+}
+
+.btn:hover,
+.play,
+.pause {
+    cursor: pointer;
 }
 
 .blue_underline {
