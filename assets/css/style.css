@@ -15,6 +15,7 @@
     --black: #000;
     --light: #ffffff;
     --blue: #006dfe;
+    --blue-hover: #0059ce;
     --dark-blue: #1b7dff;
     --shadow-bg: #15182499;
 }
@@ -34,6 +35,13 @@ section:not(#hero):not(#showcase) {
 .btn {
     background-color: var(--blue);
     color: var(--light);
+    transition: all 700ms ease-in;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--blue-hover);
+    /* border: 1px solid var(--blue); */
 }
 
 .blue_underline {
@@ -206,7 +214,7 @@ nav {
 
 .searchBox {
     border-bottom: none;
-    padding-inline: 16px;
+    text-indent: 10px;
 }
 
 .search--btn .btn {
@@ -412,6 +420,10 @@ main {
     color: var(--blue);
     font-size: 16px;
     line-height: 24px;
+}
+
+.detail--card_link img {
+    margin-inline-start: 20px;
 }
 /* END OF PHOTO GRID SECTION */
 
