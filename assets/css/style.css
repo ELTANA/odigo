@@ -20,6 +20,49 @@
     --shadow-bg: hsla(228, 26%, 11%, 0.6);
 }
 
+/* ANIMATIONS */
+@keyframes slide_down {
+    0% {
+        top: -50px;
+    }
+    20% {
+        top: -40px;
+    }
+    40% {
+        top: -30px;
+    }
+    60% {
+        top: -20px;
+    }
+    80% {
+        top: -10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes slide_up {
+    0% {
+        bottom: -50px;
+    }
+    20% {
+        bottom: -40px;
+    }
+    40% {
+        bottom: -30px;
+    }
+    60% {
+        bottom: -20px;
+    }
+    80% {
+        bottom: -10px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
 body {
     width: 100%;
     font-family: "Lato", sans-serif;
@@ -186,31 +229,11 @@ nav {
 }
 
 .hero--header {
+    /* Animation */
     position: relative;
     animation-name: slide_down;
     animation-duration: 1s;
     animation-delay: 300ms;
-}
-
-@keyframes slide_down {
-    0% {
-        top: -50px;
-    }
-    20% {
-        top: -40px;
-    }
-    40% {
-        top: -30px;
-    }
-    60% {
-        top: -20px;
-    }
-    80% {
-        top: -10px;
-    }
-    100% {
-        top: 0px;
-    }
 }
 
 .hero--text {
@@ -221,10 +244,26 @@ nav {
     line-height: 24px;
 }
 
+.hero--text {
+    /* Animation */
+    position: relative;
+    animation-name: slide_up;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+}
+
 .hero--search {
     width: 80%;
     justify-content: space-between;
     /* justify-content: flex-start; */
+}
+
+.hero--search {
+    /* Animation */
+    position: relative;
+    animation-name: slide_up;
+    animation-duration: 900ms;
+    animation-delay: 700ms;
 }
 
 .border-effect {
@@ -835,6 +874,19 @@ main {
         font-size: 1.5rem;
     }
 
+    .link-item a {
+        color: var(--light);
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .link-item a:hover {
+        font-weight: 600;
+        text-shadow: 0px 30px 4px rgba(255, 255, 255, 0.7);
+        transition: all 300ms ease-in;
+    }
+
     /* HERO SECTION */
     .hero--search {
         width: 100%;
@@ -906,6 +958,12 @@ main {
     .photoGrid--header_heading,
     .places--header_heading {
         font-weight: 700;
+    }
+
+    .image_grid_overlay p {
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 30px;
     }
 
     .photoGrid--images_two {
