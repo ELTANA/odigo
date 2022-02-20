@@ -891,7 +891,7 @@ main {
     /* HERO SECTION */
     .hero--search {
         width: 100%;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-wrap: wrap;
         row-gap: 20px;
     }
