@@ -231,9 +231,8 @@ nav {
 .hero--header {
     /* Animation */
     position: relative;
-    animation-name: slide_down;
-    animation-duration: 1s;
-    animation-delay: 300ms;
+    animation: slide_down 1s ease-in 300ms;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .hero--text {
@@ -247,23 +246,21 @@ nav {
 .hero--text {
     /* Animation */
     position: relative;
-    animation-name: slide_up;
-    animation-duration: 1s;
-    animation-delay: 300ms;
+    animation: slide_up 1.1s linear 300ms;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .hero--search {
     width: 80%;
-    justify-content: space-between;
-    /* justify-content: flex-start; */
+    /* justify-content: space-between; */
+    justify-content: flex-start;
 }
 
 .hero--search {
     /* Animation */
     position: relative;
-    animation-name: slide_up;
-    animation-duration: 900ms;
-    animation-delay: 700ms;
+    animation: slide_up 1.2s ease-in 300ms;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .border-effect {
@@ -341,10 +338,6 @@ main {
     background-color: var(--light);
     color: var(--dark);
     align-self: center;
-    /* position: relative; */
-    /* top: 35%;
-    left: 50%;
-    transform: translate(-50%, 35%); */
     z-index: 2;
 }
 
@@ -890,8 +883,6 @@ main {
 
     /* HERO SECTION */
     .hero--search {
-        width: 100%;
-        justify-content: flex-start;
         flex-wrap: wrap;
         row-gap: 20px;
     }

@@ -77,6 +77,7 @@ heroSearch.addEventListener("mouseenter", () => {
     }
 });
 
+// Clear Input Field
 searchBtn.addEventListener("click", () => {
     // console.log("clicked");
     if (searchWhere.childElementCount > 1) {
@@ -112,6 +113,23 @@ heroSearch.addEventListener("mouseleave", () => {
         customLabel_two.classList.remove("display-none");
     }
 });
+// heroSearch.addEventListener("mouseleave", () => {
+//     if (window.innerWidth > 1023) {
+//         searchWhat.classList.add("border-effect");
+//         searchWhat.removeChild(searchBoxOne);
+//         searchWhere.classList.add("border-effect");
+//         searchWhere.removeChild(searchBoxTwo);
+//         ovalImg_one.classList.remove("display-none");
+//         customLabel_one.classList.remove("display-none");
+//         ovalImg_two.classList.remove("display-none");
+//         customLabel_two.classList.remove("display-none");
+//     } else {
+//         searchWhere.classList.add("border-effect");
+//         searchWhere.removeChild(searchBoxTwo);
+//         ovalImg_two.classList.remove("display-none");
+//         customLabel_two.classList.remove("display-none");
+//     }
+// });
 
 // SHOWCASE VIDEO INITIALIZATION
 btnOverlay.addEventListener("click", () => {
