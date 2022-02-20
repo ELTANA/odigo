@@ -28,8 +28,12 @@ window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
     if (scrolled > 0) {
         navBar.style.backgroundColor = "#0e1d28";
+        navBar.style.position = "fixed";
+        navBar.style.top = "0";
     } else {
-        navBar.style.backgroundColor = "transparent";
+        navBar.style.backgroundColor = "";
+        navBar.style.position = "static";
+        // navBar.style.top = "0";
     }
 });
 
@@ -76,12 +80,17 @@ heroSearch.addEventListener("mouseenter", () => {
 searchBtn.addEventListener("click", () => {
     // console.log("clicked");
     if (searchWhere.childElementCount > 1) {
-        searchWhat.children[2].value = "";
         searchWhere.children[2].value = "";
         // console.log("true");
         // console.log(searchWhere.childElementCount);
         // console.log(searchWhere.children);
         // console.log(searchWhere.children[2].value);
+    } else if (searchWhat.childElementCount > 1) {
+        searchWhat.children[2].value = "";
+        // console.log("true");
+        // console.log(searchWhat.childElementCount);
+        // console.log(searchWhat.children);
+        // console.log(searchWhat.children[2].value);
     }
 });
 
