@@ -1,16 +1,20 @@
 const html = document.querySelector("html");
+const body = document.querySelector("html");
 const navBar = document.querySelector("#navbar");
 const navBg = document.querySelector(".navBg");
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav--links");
 
 // HERO SEARCH
+const hero = document.querySelector("#hero");
+const heroSearch = document.querySelector(".hero--search");
 const searchWhat = document.querySelector(".search--what");
 const ovalImg_one = document.querySelector(".search--what img");
 const customLabel_one = document.querySelector(".custom--label_one");
 const searchWhere = document.querySelector(".search--where");
 const ovalImg_two = document.querySelector(".search--where img");
 const customLabel_two = document.querySelector(".custom--label_two");
+const searchBtn = document.querySelector(".searchBtn");
 
 // SHOWCASE VIDEO SECTION
 const btnOverlay = document.querySelector(".btn_overlay");
@@ -36,41 +40,68 @@ hamburger.addEventListener("click", () => {
     html.classList.toggle("overflow-hidden");
 });
 
-// HERO SEARCH BOX ELEMENT CREATION
-searchBox = document.createElement("input");
-searchBox.setAttribute("type", "text");
-searchBox.setAttribute("placeholder", "What would you like to do?");
-searchBox.classList.add("searchBox", "no-border", "display-block");
-console.log(searchBox);
+// HERO SEARCH BOX ONE ELEMENT CREATION
+searchBoxOne = document.createElement("input");
+searchBoxOne.setAttribute("type", "text");
+searchBoxOne.setAttribute("placeholder", "What would you like to do?");
+searchBoxOne.classList.add("searchBoxOne", "no-border", "display-block");
+// console.log(searchBoxOne);
 
-// Display Search Box One on Mouse ENter
-searchWhat.addEventListener("mouseenter", () => {
-    ovalImg_one.classList.add("display-none");
-    customLabel_one.classList.add("display-none");
-    searchWhat.classList.remove("border-effect");
-    searchWhat.append(searchBox);
+// HERO SEARCH BOX TWO ELEMENT CREATION
+searchBoxTwo = document.createElement("input");
+searchBoxTwo.setAttribute("type", "text");
+searchBoxTwo.setAttribute("placeholder", "Where would you like to go?");
+searchBoxTwo.classList.add("searchBoxTwo", "no-border", "display-block");
+// console.log(searchBoxTwo);
+
+// Display Search Box on Mouse Enter
+heroSearch.addEventListener("mouseenter", () => {
+    if (window.innerWidth > 1023) {
+        searchWhat.classList.remove("border-effect");
+        searchWhat.append(searchBoxOne);
+        searchWhere.classList.remove("border-effect");
+        searchWhere.append(searchBoxTwo);
+        ovalImg_one.classList.add("display-none");
+        customLabel_one.classList.add("display-none");
+        ovalImg_two.classList.add("display-none");
+        customLabel_two.classList.add("display-none");
+    } else {
+        searchWhere.classList.remove("border-effect");
+        searchWhere.append(searchBoxTwo);
+        ovalImg_two.classList.add("display-none");
+        customLabel_two.classList.add("display-none");
+    }
 });
 
-searchWhat.addEventListener("mouseleave", () => {
-    ovalImg_one.classList.remove("display-none");
-    customLabel_one.classList.remove("display-none");
-    searchWhat.classList.add("border-effect");
-    searchWhat.removeChild(searchBox);
+searchBtn.addEventListener("click", () => {
+    // console.log("clicked");
+    if (searchWhere.childElementCount > 1) {
+        searchWhat.children[2].value = "";
+        searchWhere.children[2].value = "";
+        // console.log("true");
+        // console.log(searchWhere.childElementCount);
+        // console.log(searchWhere.children);
+        // console.log(searchWhere.children[2].value);
+    }
 });
 
-// Display Search Box Two on Mouse ENter
-searchWhere.addEventListener("mouseenter", () => {
-    ovalImg_two.classList.add("display-none");
-    customLabel_two.classList.add("display-none");
-    searchWhere.classList.remove("border-effect");
-    searchWhere.append(searchBox);
-});
-
-searchWhere.addEventListener("mouseleave", () => {
-    ovalImg_two.classList.remove("display-none");
-    customLabel_two.classList.remove("display-none");
-    searchWhere.classList.add("border-effect");
-    searchWhere.removeChild(searchBox);
+// Display Search Div on Mouse Leave
+heroSearch.addEventListener("mouseleave", () => {
+    if (window.innerWidth > 1023) {
+        searchWhat.classList.add("border-effect");
+        searchWhat.removeChild(searchBoxOne);
+        searchWhere.classList.add("border-effect");
+        searchWhere.removeChild(searchBoxTwo);
+        ovalImg_one.classList.remove("display-none");
+        customLabel_one.classList.remove("display-none");
+        ovalImg_two.classList.remove("display-none");
+        customLabel_two.classList.remove("display-none");
+    } else {
+        searchWhere.classList.add("border-effect");
+        searchWhere.removeChild(searchBoxTwo);
+        ovalImg_two.classList.remove("display-none");
+        customLabel_two.classList.remove("display-none");
+    }
 });
 
 // SHOWCASE VIDEO INITIALIZATION
