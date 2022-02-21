@@ -45,7 +45,6 @@ const likesSix = document.querySelector(".likesSix");
 placesCardImageOne.addEventListener("dblclick", function () {
     // console.log("clicked");
     likesOne.setAttribute("src", "./assets/images/liked.png");
-    likesOneId.style.transform = "scale(1.2)";
     placesCardImageOne.classList.add("scale");
     if (likesCountOne.textContent < 222) {
         likesCountOne.textContent++;
