@@ -15,7 +15,7 @@
     --black: #000;
     --light: #ffffff;
     --blue: #006dfe;
-    --blue-hover: #0059ce;
+    --blue-hover: #2222ff;
     --dark-blue: #1b7dff;
     --shadow-bg: #15182399;
     --shadow-bg-light: rgba(21, 24, 35, 0.3);
@@ -403,7 +403,8 @@ main {
 }
 
 .detail--card_link:hover img,
-.benefits--card_link:hover a img {
+.benefits--card_link:hover a img,
+.photoGrid--link:hover img {
     position: relative;
     animation: slide_inline 1s linear 300ms infinite;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
@@ -551,7 +552,12 @@ main {
 }
 
 .places--card,
-.places--card_img,
+.places--card_imgOne,
+.places--card_imgTwo,
+.places--card_imgThree,
+.places--card_imgFour,
+.places--card_imgFive,
+.places--card_imgSix,
 .card--img,
 .card--img img {
     width: 100%;
@@ -565,7 +571,12 @@ main {
     justify-content: space-between;
 }
 
-.places--card_img,
+.places--card_imgOne,
+.places--card_imgTwo,
+.places--card_imgThree,
+.places--card_imgFour,
+.places--card_imgFive,
+.places--card_imgSix,
 .image_grid {
     position: relative;
     width: 100%;
@@ -591,6 +602,11 @@ main {
 .likes,
 .comments {
     gap: 5px;
+}
+
+.likes:hover img,
+.comments:hover img {
+    transform: scale(1.2);
 }
 
 .image_grid_overlay {

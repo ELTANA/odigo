@@ -16,6 +16,162 @@ const ovalImg_two = document.querySelector(".search--where img");
 const customLabel_two = document.querySelector(".custom--label_two");
 const searchBtn = document.querySelector(".searchBtn");
 
+// CARDS LIKES ONE
+const placesCardImageOne = document.querySelector(".places--card_imgOne");
+const likesCountOne = document.querySelector(".likesCountOne");
+const likesOne = document.querySelector(".likesOne");
+// CARDS LIKES TWO
+const placesCardImageTwo = document.querySelector(".places--card_imgTwo");
+const likesCountTwo = document.querySelector(".likesCountTwo");
+const likesTwo = document.querySelector(".likesTwo");
+// CARDS LIKES THREE
+const placesCardImageThree = document.querySelector(".places--card_imgThree");
+const likesCountThree = document.querySelector(".likesCountThree");
+const likesThree = document.querySelector(".likesThree");
+// CARDS LIKES FOUR
+const placesCardImageFour = document.querySelector(".places--card_imgFour");
+const likesCountFour = document.querySelector(".likesCountFour");
+const likesFour = document.querySelector(".likesFour");
+// CARDS LIKES FIVE
+const placesCardImageFive = document.querySelector(".places--card_imgFive");
+const likesCountFive = document.querySelector(".likesCountFive");
+const likesFive = document.querySelector(".likesFive");
+// CARDS LIKES SIX
+const placesCardImageSix = document.querySelector(".places--card_imgSix");
+const likesCountSix = document.querySelector(".likesCountSix");
+const likesSix = document.querySelector(".likesSix");
+
+// CARD ONE LIKES INDICATOR
+placesCardImageOne.addEventListener("dblclick", function () {
+    // console.log("clicked");
+    likesOne.setAttribute("src", "./assets/images/liked.png");
+    if (likesCountOne.textContent < 222) {
+        likesCountOne.textContent++;
+    }
+});
+
+likesOne.addEventListener("click", function () {
+    // console.log("clicked");
+    if (likesCountOne.textContent > 221) {
+        // console.log("decrease");
+        likesCountOne.textContent--;
+        likesOne.setAttribute("src", "./assets/images/heart.png");
+    } else if (likesCountOne.textContent < 222) {
+        // console.log("Increase");
+        likesCountOne.textContent++;
+        likesOne.setAttribute("src", "./assets/images/liked.png");
+    }
+});
+
+// CARD TWO LIKES INDICATOR
+placesCardImageTwo.addEventListener("dblclick", function () {
+    // console.log("clicked");
+    likesTwo.setAttribute("src", "./assets/images/liked.png");
+    if (likesCountTwo.textContent < 222) {
+        likesCountTwo.textContent++;
+    }
+});
+
+likesTwo.addEventListener("click", function () {
+    // console.log("clicked");
+    if (likesCountTwo.textContent > 221) {
+        // console.log("decrease");
+        likesCountTwo.textContent--;
+        likesTwo.setAttribute("src", "./assets/images/heart.png");
+    } else if (likesCountTwo.textContent < 222) {
+        // console.log("Increase");
+        likesCountTwo.textContent++;
+        likesTwo.setAttribute("src", "./assets/images/liked.png");
+    }
+});
+
+// CARD THREE LIKES INDICATOR
+placesCardImageThree.addEventListener("dblclick", function () {
+    // console.log("clicked");
+    likesThree.setAttribute("src", "./assets/images/liked.png");
+    if (likesCountThree.textContent < 222) {
+        likesCountThree.textContent++;
+    }
+});
+
+likesThree.addEventListener("click", function () {
+    // console.log("clicked");
+    if (likesCountThree.textContent > 221) {
+        // console.log("decrease");
+        likesCountThree.textContent--;
+        likesThree.setAttribute("src", "./assets/images/heart.png");
+    } else if (likesCountThree.textContent < 222) {
+        // console.log("Increase");
+        likesCountThree.textContent++;
+        likesThree.setAttribute("src", "./assets/images/liked.png");
+    }
+});
+
+// CARD FOUR LIKES INDICATOR
+placesCardImageFour.addEventListener("dblclick", function () {
+    // console.log("clicked");
+    likesFour.setAttribute("src", "./assets/images/liked.png");
+    if (likesCountFour.textContent < 222) {
+        likesCountFour.textContent++;
+    }
+});
+
+likesFour.addEventListener("click", function () {
+    // console.log("clicked");
+    if (likesCountFour.textContent > 221) {
+        // console.log("decrease");
+        likesCountFour.textContent--;
+        likesFour.setAttribute("src", "./assets/images/heart.png");
+    } else if (likesCountFour.textContent < 222) {
+        // console.log("Increase");
+        likesCountFour.textContent++;
+        likesFour.setAttribute("src", "./assets/images/liked.png");
+    }
+});
+
+// CARD FIVE LIKES INDICATOR
+placesCardImageFive.addEventListener("dblclick", function () {
+    // console.log("clicked");
+    likesFive.setAttribute("src", "./assets/images/liked.png");
+    if (likesCountFive.textContent < 222) {
+        likesCountFive.textContent++;
+    }
+});
+
+likesFive.addEventListener("click", function () {
+    // console.log("clicked");
+    if (likesCountFive.textContent > 221) {
+        // console.log("decrease");
+        likesCountFive.textContent--;
+        likesFive.setAttribute("src", "./assets/images/heart.png");
+    } else if (likesCountFive.textContent < 222) {
+        // console.log("Increase");
+        likesCountFive.textContent++;
+        likesFive.setAttribute("src", "./assets/images/liked.png");
+    }
+});
+// CARD SIX LIKES INDICATOR
+placesCardImageSix.addEventListener("dblclick", function () {
+    // console.log("clicked");
+    likesSix.setAttribute("src", "./assets/images/liked.png");
+    if (likesCountSix.textContent < 222) {
+        likesCountSix.textContent++;
+    }
+});
+
+likesSix.addEventListener("click", function () {
+    // console.log("clicked");
+    if (likesCountSix.textContent > 221) {
+        // console.log("decrease");
+        likesCountSix.textContent--;
+        likesSix.setAttribute("src", "./assets/images/heart.png");
+    } else if (likesCountSix.textContent < 222) {
+        // console.log("Increase");
+        likesCountSix.textContent++;
+        likesSix.setAttribute("src", "./assets/images/liked.png");
+    }
+});
+
 // SHOWCASE VIDEO SECTION
 const btnOverlay = document.querySelector(".btn_overlay");
 const play = document.querySelector(".play");
