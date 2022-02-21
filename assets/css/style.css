@@ -566,11 +566,6 @@ main {
     justify-content: center;
 }
 
-.places--card {
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .places--card_imgOne,
 .places--card_imgTwo,
 .places--card_imgThree,
@@ -581,6 +576,11 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+.places--card {
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .info,
@@ -605,7 +605,7 @@ main {
 }
 
 .likes:hover img,
-.comments:hover img {
+.comments:hover img .scale {
     transform: scale(1.2);
 }
 
