@@ -17,7 +17,8 @@
     --blue: #006dfe;
     --blue-hover: #0059ce;
     --dark-blue: #1b7dff;
-    --shadow-bg: hsla(228, 26%, 11%, 0.6);
+    --shadow-bg: #15182399;
+    --shadow-bg-light: rgba(21, 24, 35, 0.3);
 }
 
 /* ANIMATIONS */
@@ -613,7 +614,7 @@ main {
 
 .card_overlay,
 .image_grid_overlay {
-    background-color: var(--shadow-bg);
+    background-color: var(--shadow-bg-light);
     color: var(--light);
     position: absolute;
     bottom: 0;
