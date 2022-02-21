@@ -605,7 +605,7 @@ main {
 }
 
 .likes:hover img,
-.comments:hover img .scale {
+.comments:hover img {
     transform: scale(1.2);
 }
 
