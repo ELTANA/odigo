@@ -41,6 +41,103 @@ const placesCardImageSix = document.querySelector(".places--card_imgSix");
 const likesCountSix = document.querySelector(".likesCountSix");
 const likesSix = document.querySelector(".likesSix");
 
+// SHOWCASE VIDEO SECTION
+const btnOverlay = document.querySelector(".btn_overlay");
+const play = document.querySelector(".play");
+const pause = document.querySelector(".pause");
+const showcase_video = document.querySelector(".showcase_video");
+const video_placeholder_img = document.querySelector(".video_placeholder_img");
+
+// ADD NAVBAR BACKGROUND_COLOR ON SCROLL
+window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    if (scrolled > 0) {
+        navBar.style.backgroundColor = "#0e1d28";
+        navBar.style.position = "fixed";
+        navBar.style.top = "0";
+    } else {
+        navBar.style.backgroundColor = "";
+        navBar.style.position = "";
+    }
+});
+
+// RESPONSIVE HAMBURGER
+hamburger.addEventListener("click", () => {
+    navBar.classList.toggle("navBg");
+    navLinks.classList.toggle("active");
+    html.classList.toggle("overflow-hidden");
+});
+
+// HERO SEARCH BOX ONE ELEMENT CREATION
+searchBoxOne = document.createElement("input");
+searchBoxOne.setAttribute("type", "text");
+searchBoxOne.setAttribute("placeholder", "What would you like to do?");
+searchBoxOne.classList.add("searchBoxOne", "no-border", "display-block");
+// console.log(searchBoxOne);
+
+// HERO SEARCH BOX TWO ELEMENT CREATION
+searchBoxTwo = document.createElement("input");
+searchBoxTwo.setAttribute("type", "text");
+searchBoxTwo.setAttribute("placeholder", "Where would you like to go?");
+searchBoxTwo.classList.add("searchBoxTwo", "no-border", "display-block");
+// console.log(searchBoxTwo);
+
+// Display Search Box on Mouse Enter
+heroSearch.addEventListener("mouseenter", () => {
+    if (window.innerWidth > 1023) {
+        searchWhat.classList.remove("border-effect");
+        searchWhat.append(searchBoxOne);
+        searchWhere.classList.remove("border-effect");
+        searchWhere.append(searchBoxTwo);
+        ovalImg_one.classList.add("display-none");
+        customLabel_one.classList.add("display-none");
+        ovalImg_two.classList.add("display-none");
+        customLabel_two.classList.add("display-none");
+    } else {
+        searchWhere.classList.remove("border-effect");
+        searchWhere.append(searchBoxTwo);
+        ovalImg_two.classList.add("display-none");
+        customLabel_two.classList.add("display-none");
+    }
+});
+
+// Clear Input Field
+searchBtn.addEventListener("click", () => {
+    // console.log("clicked");
+    if (searchWhere.childElementCount > 1) {
+        searchWhere.children[2].value = "";
+        // console.log("true");
+        // console.log(searchWhere.childElementCount);
+        // console.log(searchWhere.children);
+        // console.log(searchWhere.children[2].value);
+    } else if (searchWhat.childElementCount > 1) {
+        searchWhat.children[2].value = "";
+        // console.log("true");
+        // console.log(searchWhat.childElementCount);
+        // console.log(searchWhat.children);
+        // console.log(searchWhat.children[2].value);
+    }
+});
+
+// Display Search Div on Mouse Leave
+heroSearch.addEventListener("mouseleave", () => {
+    if (window.innerWidth > 1023) {
+        searchWhat.classList.add("border-effect");
+        searchWhat.removeChild(searchBoxOne);
+        searchWhere.classList.add("border-effect");
+        searchWhere.removeChild(searchBoxTwo);
+        ovalImg_one.classList.remove("display-none");
+        customLabel_one.classList.remove("display-none");
+        ovalImg_two.classList.remove("display-none");
+        customLabel_two.classList.remove("display-none");
+    } else {
+        searchWhere.classList.add("border-effect");
+        searchWhere.removeChild(searchBoxTwo);
+        ovalImg_two.classList.remove("display-none");
+        customLabel_two.classList.remove("display-none");
+    }
+});
+
 // CARD ONE LIKES INDICATOR
 placesCardImageOne.addEventListener("dblclick", function () {
     // console.log("clicked");
@@ -171,121 +268,6 @@ likesSix.addEventListener("click", function () {
         likesSix.setAttribute("src", "./assets/images/liked.png");
     }
 });
-
-// SHOWCASE VIDEO SECTION
-const btnOverlay = document.querySelector(".btn_overlay");
-const play = document.querySelector(".play");
-const pause = document.querySelector(".pause");
-const showcase_video = document.querySelector(".showcase_video");
-const video_placeholder_img = document.querySelector(".video_placeholder_img");
-
-// ADD NAVBAR BACKGROUND_COLOR ON SCROLL
-window.addEventListener("scroll", () => {
-    const scrolled = window.scrollY;
-    if (scrolled > 0) {
-        navBar.style.backgroundColor = "#0e1d28";
-        navBar.style.position = "fixed";
-        navBar.style.top = "0";
-    } else {
-        navBar.style.backgroundColor = "";
-        navBar.style.position = "static";
-        // navBar.style.top = "0";
-    }
-});
-
-// RESPONSIVE HAMBURGER
-hamburger.addEventListener("click", () => {
-    navBar.classList.toggle("navBg");
-    navLinks.classList.toggle("active");
-    html.classList.toggle("overflow-hidden");
-});
-
-// HERO SEARCH BOX ONE ELEMENT CREATION
-searchBoxOne = document.createElement("input");
-searchBoxOne.setAttribute("type", "text");
-searchBoxOne.setAttribute("placeholder", "What would you like to do?");
-searchBoxOne.classList.add("searchBoxOne", "no-border", "display-block");
-// console.log(searchBoxOne);
-
-// HERO SEARCH BOX TWO ELEMENT CREATION
-searchBoxTwo = document.createElement("input");
-searchBoxTwo.setAttribute("type", "text");
-searchBoxTwo.setAttribute("placeholder", "Where would you like to go?");
-searchBoxTwo.classList.add("searchBoxTwo", "no-border", "display-block");
-// console.log(searchBoxTwo);
-
-// Display Search Box on Mouse Enter
-heroSearch.addEventListener("mouseenter", () => {
-    if (window.innerWidth > 1023) {
-        searchWhat.classList.remove("border-effect");
-        searchWhat.append(searchBoxOne);
-        searchWhere.classList.remove("border-effect");
-        searchWhere.append(searchBoxTwo);
-        ovalImg_one.classList.add("display-none");
-        customLabel_one.classList.add("display-none");
-        ovalImg_two.classList.add("display-none");
-        customLabel_two.classList.add("display-none");
-    } else {
-        searchWhere.classList.remove("border-effect");
-        searchWhere.append(searchBoxTwo);
-        ovalImg_two.classList.add("display-none");
-        customLabel_two.classList.add("display-none");
-    }
-});
-
-// Clear Input Field
-searchBtn.addEventListener("click", () => {
-    // console.log("clicked");
-    if (searchWhere.childElementCount > 1) {
-        searchWhere.children[2].value = "";
-        // console.log("true");
-        // console.log(searchWhere.childElementCount);
-        // console.log(searchWhere.children);
-        // console.log(searchWhere.children[2].value);
-    } else if (searchWhat.childElementCount > 1) {
-        searchWhat.children[2].value = "";
-        // console.log("true");
-        // console.log(searchWhat.childElementCount);
-        // console.log(searchWhat.children);
-        // console.log(searchWhat.children[2].value);
-    }
-});
-
-// Display Search Div on Mouse Leave
-heroSearch.addEventListener("mouseleave", () => {
-    if (window.innerWidth > 1023) {
-        searchWhat.classList.add("border-effect");
-        searchWhat.removeChild(searchBoxOne);
-        searchWhere.classList.add("border-effect");
-        searchWhere.removeChild(searchBoxTwo);
-        ovalImg_one.classList.remove("display-none");
-        customLabel_one.classList.remove("display-none");
-        ovalImg_two.classList.remove("display-none");
-        customLabel_two.classList.remove("display-none");
-    } else {
-        searchWhere.classList.add("border-effect");
-        searchWhere.removeChild(searchBoxTwo);
-        ovalImg_two.classList.remove("display-none");
-        customLabel_two.classList.remove("display-none");
-    }
-});
-// heroSearch.addEventListener("mouseleave", () => {
-//     if (window.innerWidth > 1023) {
-//         searchWhat.classList.add("border-effect");
-//         searchWhat.removeChild(searchBoxOne);
-//         searchWhere.classList.add("border-effect");
-//         searchWhere.removeChild(searchBoxTwo);
-//         ovalImg_one.classList.remove("display-none");
-//         customLabel_one.classList.remove("display-none");
-//         ovalImg_two.classList.remove("display-none");
-//         customLabel_two.classList.remove("display-none");
-//     } else {
-//         searchWhere.classList.add("border-effect");
-//         searchWhere.removeChild(searchBoxTwo);
-//         ovalImg_two.classList.remove("display-none");
-//         customLabel_two.classList.remove("display-none");
-//     }
-// });
 
 // SHOWCASE VIDEO INITIALIZATION
 btnOverlay.addEventListener("click", () => {
